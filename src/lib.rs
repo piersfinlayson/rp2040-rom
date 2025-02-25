@@ -52,7 +52,7 @@ impl ROM {
     /// # Safety
     ///
     /// This function will reset the device and not return.
-    pub unsafe fn reset_usb_boot(usb_activity_gpio_pin_mask: u32, disable_interface_mask: u32) {
+    pub unsafe fn reset_usb_boot(usb_activity_gpio_pin_mask: u32, disable_interface_mask: u32) -> ! {
         // ROM reset_usb_boot function definition
         type RomResetUsbBootFn =
             unsafe extern "C" fn(usb_activity_gpio_pin_mask: u32, disable_interface_mask: u32);
@@ -68,6 +68,9 @@ impl ROM {
 
         // Call the function
         func(usb_activity_gpio_pin_mask, disable_interface_mask);
+        
+        // Loop in order to convince the compiler this function own't return
+        loop {}
     }
 }
 
