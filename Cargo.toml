@@ -1,0 +1,21 @@
+[package]
+name = "rp2040-rom"
+version = "0.1.0"
+edition = "2021"
+authors = ["Piers Finlayson <piers@piers.rocks>"]
+description = "Access to Raspberry Pi RP2040 ROM functions from Rust"
+repository = "https://github.com/your-username/rp2040-rom"
+documentation = "https://docs.rs/rp2040-rom"
+readme = "README.md"
+keywords = ["rp2040", "raspberrypi", "rom", "embedded", "no-std"]
+categories = ["embedded", "hardware-support", "no-std"]
+license = "MIT"
+
+[dependencies]
+# No dependencies required
+
+[features]
+default = []
+
+[package.metadata.docs.rs]
+targets = ["thumbv6m-none-eabi"]
