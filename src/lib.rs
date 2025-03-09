@@ -115,7 +115,7 @@ impl ROM {
         let lookup_addr = Self::rom_hword_as_ptr(BOOTROM_TABLE_LOOKUP_OFFSET);
         let rom_table_lookup: RomTableLookupFn = core::mem::transmute(lookup_addr);
 
-        // Use the looku function to lookup this code
+        // Use the lookup function to lookup this code
         rom_table_lookup(func_table, code)
     }
 }
