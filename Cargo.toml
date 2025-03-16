@@ -1,10 +1,10 @@
 [package]
 name = "rp2040-rom"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["Piers Finlayson <piers@piers.rocks>"]
 description = "Access to Raspberry Pi RP2040 ROM functions from Rust"
-repository = "https://github.com/your-username/rp2040-rom"
+repository = "https://github.com/piersfinlayson/rp2040-rom"
 documentation = "https://docs.rs/rp2040-rom"
 readme = "README.md"
 keywords = ["rp2040", "raspberrypi", "rom", "embedded", "no-std"]
